@@ -1,45 +1,66 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corto Calculator JS</title>
-    <link type= "text/css"  href= "estilo.css" rel= "stylesheet">
+    <title>Calculadora con JavaScript</title>
+    <link type="text/css" href="estilo.css" rel="stylesheet">
 </head>
-<body onload="init();">
-    <h2>Juan Luis Vasquez Lopez 0909-20-6391</h2>
-    <h2>Maderline Vanessa Aldana Martinez 0909-20-6881</h2>
-    <table class="calculadora">
-        <tr>
-            <td><button id="reset">C</button></td>
-            <td colspan="3" id="result"></td> <!--Display de calculadora-->
-        </tr>
-        <tr>
-            <td><button id="siete">7</button></td>
-            <td><button id="ocho">8</button></td>
-            <td><button id="nueve">9</button></td>
-            <td><button id="suma">+</button></td>
-        </tr>
-        <tr>
-            <td><button id="cuatro">4</button></td>
-            <td><button id="cinco">5</button></td>
-            <td><button id="seis">6</button></td>
-            <td><button id="resta">-</button></td>
-        </tr>
-        <tr>
-            <td><button id="uno">1</button></td>
-            <td><button id="dos">2</button></td>
-            <td><button id="tres">3</button></td>
-            <td><button id="division">/</button></td>
-        </tr>
-        <tr>
-            <td><button id= "cero">0</button></td>
-            <td><button id= "punto">.</button></td>
-            <td><button id= "igual">=</button></td>
-            <td><button id="multiplicacion">÷</button></td>
-        </tr>
-    </table>
-    <script src="calculadora.js"></script>
+<body>
+
+    <div id="cabecera">
+        <h2>Juan Luis Vasquez Lopez 0909-20-6391</h2>
+        <h2>Mederlaine Vanessa Aldana Martínez 09090-20-6881</h2>
+    </div>
+
+    <!-- Calculadora -->
+    <div id="calculadora">
+        <!-- pantalla y tecla limpiar -->
+        <div class="parteSuperior">
+
+            <span class="limpiar" onclick="pulsada('C')">C</span>
+            <div class="pantalla"> </div> <!--Ojo tenemos un espacio para que exista nodeValue-->
+
+        </div>
+
+        <div class="teclas">
+
+             <!-- operadores y otras teclas -->
+
+            <span onclick="pulsada('7')">7</span>
+
+            <span onclick="pulsada('8')">8</span>
+
+            <span onclick="pulsada('9')">9</span>
+
+            <span class="operador" onclick="pulsada('+')">+</span>
+
+            <span onclick="pulsada('4')">4</span>
+
+                <span onclick="pulsada('5')">5</span>
+
+                <span onclick="pulsada('6')">6</span>
+
+                <span class="operador" onclick="pulsada('-')">-</span>
+
+                <span onclick="pulsada('1')">1</span>
+
+                <span onclick="pulsada('2')">2</span>
+
+                <span onclick="pulsada('3')">3</span>
+
+                <span class="operador" onclick="pulsada('/')">÷</span>
+
+                <span onclick="pulsada('0')">0</span>
+
+                <span onclick="pulsada('.')">.</span>
+
+                <span class="igual" onclick="pulsada('=')">=</span>
+
+                <span class="operador" onclick="pulsada('*')">x</span>
+
+            </div>
+
+</div>
+<script src="calculadora.js"></script>
 </body>
 </html>
